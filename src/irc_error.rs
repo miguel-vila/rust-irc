@@ -2,6 +2,7 @@
 pub enum IrcError {
     IncompleteCommand(String),
     Parse(String),
-    NotImplemented
+    NotImplemented,
+    UserHasNoNickName
 }
 

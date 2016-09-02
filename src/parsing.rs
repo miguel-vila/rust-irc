@@ -26,7 +26,7 @@ fn parse_user(mut params: SplitWhitespace) -> Result<Command, IrcError> {
     let user_result = params.next().ok_or( IrcError::IncompleteCommand( "Missing 'user' for USER command".to_string() ) );
     let mode_str_result = params.next().ok_or( IrcError::IncompleteCommand( "Missing 'mode' for USER command".to_string() ) );
     params.next();
-    let realname_opt = params.next().ok_or( IrcError::IncompleteCommand( "Missing 'realname' format USER command".to_string() ) );
+    let realname_opt = params.next().ok_or( IrcError::IncompleteCommand( "Missing 'realname' for USER command".to_string() ) );
     
     mdo! {
         user     =<< user_result;
